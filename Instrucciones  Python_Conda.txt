@@ -1,0 +1,5 @@
+conda create -n Curso Python=3.10.12  =  crear un nuevo ambiente virtual
+conda activate curso                  = activar el ambiente virtual
+conda deactivate 				= desactivar el ambiente virtual
+conda list                    = ver la lista de paquetes en python instladas
+conda remove --name mi_entorno_virtual --all     =  borrar un entorno virtual
