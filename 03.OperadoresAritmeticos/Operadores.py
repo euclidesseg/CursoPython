@@ -13,8 +13,11 @@ print(f"El resultado de la Resta es:{resultadoResta}")
 print(f"El resultado de la Multiplicacion es:{resultadoMultiplicacion}")
 print(f"El resultado de la Division es:{resultadoDivision}")
 
-#ESTOS SERIAN LOS OPERADORES MAS USADOS EN PYTHON PERO TAMBIEN TENEMOS LA POTENCIACION
-#ELEVAR DOS A LA 5 (MULTIPLICAR EL 2 POR SI MISMO 5 VECES)
+#ESTOS SERIAN LOS OPERADORES MAS USADOS EN PYTHON PERO TAMBIEN TENEMOS LA POTENCIACION Y MODULO
+#ELEVAR NUEVE A LA 7 (MULTIPLICAR EL 9 POR SI MISMO 7 VECES)
+#HALLAR EL MODULO DE 9/7
 
 resultadoPotencia = numeroUno ** numeroDos;
+resultadoModulo = numeroUno % numeroDos;
 print(f"El resultado de la Potencia es:{resultadoPotencia}");
+print(f"El resultado del modulo es:{resultadoModulo}");
