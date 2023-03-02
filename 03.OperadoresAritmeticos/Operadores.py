@@ -6,7 +6,8 @@ numeroDos = 7;
 resultadoSuma = numeroUno + numeroDos;
 resultadoResta= numeroUno - numeroDos;
 resultadoMultiplicacion = numeroUno * numeroDos;
-resultadoDivision = numeroUno / numeroDos;
+resultadoDivision = numeroUno // numeroDos;
+#SI QUIERO QUE ESTA DIVICION ME ARROJE SIMPLEMENTE EL RESULTADO ENTERO SIN DECIMALES LE AGREGO COMO OPERADOR //
 
 print(f"El resultado de la Suma es: {resultadoSuma}")
 print(f"El resultado de la Resta es:{resultadoResta}")

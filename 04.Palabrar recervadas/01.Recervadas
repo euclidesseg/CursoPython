@@ -1,0 +1,10 @@
+---- En python existen un todal de 35 palabras recervadas que no pueden usasrse 
+---- para nombrar variables, clases, obgetos, metodos o cualquiero otro elemento dentro de nuestro codigo
+---- algunas de estas palabras son.
+
+---- and ---- del ---- for ---- is ---- raise ----
+---- if ---- else ---- elif ---- from ---- lambda ----
+---- return ---- breack ---- global ---- not ---- try ----
+---- class ---- execpt ---- or ---- while ---- continue ----
+---- exec ---- import ---- yield ---- def ---- finaly ----
+---- int ---- print ---- assert ---- j ----
