@@ -34,3 +34,8 @@ print(f'{nombre} {type(nombre)} \n');
 # Tipo de datos Bolleano
 verdaderoFalso = 3 == 3;
 print(f'{verdaderoFalso} {type(verdaderoFalso)}');
+
+
+#NOTA PARA REDONDEAR UN DECIMAL A SOLO DOS DECIMALES HACEMOS ESTO
+resultado = 7 / 3
+resultado_redondeado = round(resultado, 2)
