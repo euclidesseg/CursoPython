@@ -1,3 +1,29 @@
+----# Un ambiente en Python es un entorno aislado que tiene su propia versión de Python
+----# y de los paquetes instalados. 
+----# Esto significa que puede tener diferentes versiones de paquetes
+----# o versiones de Python instaladas en diferentes entornos sin que afecten entre sí.
+
+
+
+-----Creando un nuevo ambiente de ancaonda 
+	--conda create -n Curso Python3.9.13
+
+-----# To activate this environment, use
+-----#
+-----#     $ conda activate curso //activar el ambiente
+-----#
+-----# To deactivate an active environment, use
+-----#
+-----#     $ conda deactivate //deactivar el ambiente
+-----# conda remove --name curso --all borrar un ambiente y todas las extensiones
+
+
+////// INSTALANDO UN EDITOR DE CODIGO SPYDER
+
+-----# Para instalar el id de spyder lo hacemos dentro de nuestro ambien de curso asi cuando borremos el ambiente 
+-----#tambien borramos todo su contenido
+
+
 conda create -n Curso Python=3.10.12  =  crear un nuevo ambiente virtual
 conda activate curso                  = activar el ambiente virtual
 conda deactivate 				= desactivar el ambiente virtual

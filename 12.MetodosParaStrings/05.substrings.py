@@ -1,0 +1,9 @@
+# UN SUBSTRING O SUBCADENA DENTRO DE UNA CADENA PRINCIPAL
+# PARA OBTENER UNA CADENA DE CARACTERES PODEMOS USAR LA SINTACIS 
+# VARIABLE [INICIO : FINAL : SALTOS]
+
+cadenaUno = "Hola estoy aprendiendo python"
+
+substring = cadenaUno[0 : 22]
+
+print(substring)

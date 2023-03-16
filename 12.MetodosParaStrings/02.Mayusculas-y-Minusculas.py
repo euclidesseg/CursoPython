@@ -1,0 +1,17 @@
+# EN PYTHON TAMBIEN PODEMOS USAR METODOS PARA CONVERTIR A MINUSCULAS O MINUSCULAS TODA UNA 
+# CADENA DE TEXTO
+
+# islower() SE UTILIZA PARA SABER SI UNA CADENA ESTA EN MINUSCULAS Y RETORNA UN TRUE O FALSE
+# lower()   SE USA PARA CONVERTIR TODA LA CADENA A MINUSCULAS
+
+# isupper() SE UTILIZA PARA SABER SI UNA CADENA ESTA EN MAYUSCULAS Y RETORNA UN TRUE O FALSE
+# upper()  # lower()   SE USA PARA CONVERTIR TODA LA CADENA A MAYUSCULAS
+
+nombre = 'euclides'
+print(nombre.islower())
+nombre = nombre.lower()
+print(nombre)
+
+print(nombre.isupper())
+nombre = nombre.upper()
+print(nombre)
