@@ -1,8 +1,6 @@
 # 
 import operator
-cuentas = [
-    
-    ]
+cuentas = []
 
 for i in range(3):
     cuenta = {}
