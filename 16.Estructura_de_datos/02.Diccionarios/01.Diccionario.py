@@ -29,3 +29,7 @@ print(f'\nmaterias{alumno["materias"]}')
 
 # Imprimiendo la universidad del alumno
 print(f'\nuniversidad {alumno["universidad"] ["nombre"]}')
+
+# Modificando un dato del diccionario
+alumno["universidad"] ["nombre"] = 'ITM'
+print(f'\nuniversidad {alumno["universidad"] ["nombre"]}')

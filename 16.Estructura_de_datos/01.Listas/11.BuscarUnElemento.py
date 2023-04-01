@@ -15,7 +15,7 @@ print(f'lista original \n {jugadores}')
 
 # Buscar a benzemas y guardarle eun una variable
 print('Buscar a un criterio y guardarle eun una variable')
-criterio = jugadores.index('Benzema')
+criterio = jugadores.index('Benema')
 print(f'Resultado del criterio buscado \n {jugadores[criterio]}')
 
 '''
