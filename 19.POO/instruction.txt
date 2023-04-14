@@ -1,0 +1,7 @@
+---- Una Clase es un molde a partir del cual creamos objetos 
+---- esto significa que en lenguajes como python java o c# entre otros los objetos 
+---- los define o son definidos por una clase es decir, necesitan de una clase para existir
+
+---- Un objeto esta reprecentado por dos caracteriticas 
+---- comportamamiento de los objetos (metodos)
+---- atributos de de los objetos nombre color etc
