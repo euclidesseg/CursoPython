@@ -23,6 +23,11 @@ Buscar la tarea en la lista de tareas_pendientes y eliminarla.
 Buscar la tarea en todas las listas del diccionario miembro_equipo y eliminarla si estÃ¡ presente.
 Mostrar la lista de tareas_pendientes actualizada y la lista de tareas asignadas al miembro del equipo correspondiente actualizada
 '''
+tareas_pendientes = []
+tareas_completadas = []
+miembros_equipo = []
+
+id_tarea = 0
 
 print('* ***************** *')
 print('*                   *')
@@ -30,65 +35,95 @@ print('* GESTION DE TAREAS *')
 print('*                   *')
 print('* ***************** *\n')
 
-tareas__pendientes = []
-tareas__completadas = []
-todas__las__tareas = []
-miembros_equipo = [{"nombre":'', "tasks":[]}]
-task = {}
-id_tarea = 0
-
 print('* ********* *')
 print('* ACCIONES  *')
 print('* ********* *\n')
 
-inicio = 1
-
-while(inicio != 0 ):
-    print('1: INGREAR TAREA NUEVA')
+while True:
+    print('1: INGRESAR TAREA NUEVA')
     print('2: MOSTRAR TAREAS POR MIEMBRO DE EQUIPO')
     print('3: MOSTRAR TAREAS PENDIENTES')
     print('4: MOSTRAR TAREAS COMPLETADAS')
     print('5: ELIMINAR TAREA')
-    print('6: ACTUALIZAR TAREA')
+    print('6: ACTUALIZAR ESTADO Y FECHA DE TAREA')
     print('0: ABANDONAR Y SALIR\n')
-    accion = int(input('POR FAVOR ESCOJE UNA ACCION: '))
-
-    if(accion == 1):
-        #Creamos la tarea
-        task["id"] = id_tarea
-        task["descripcion"] = input('POR FAVOR INGRESE UNA DESCRIPCION PARA LA TAREA:  ')
-        task["fechaVencimiento"] = input('POR FAVOR INGRESE LA FECHA DE VENCIMIENTO DE LA TAREA:  ')
-        task["estado"] = int(input('POR FAVOR INGRESE EL ESTADO DE LA TAREA 1: COMPLETADA 0 INCOMPLETA:  '))
-        task["nombre_miembro"] = input('POR FAVOR INGRESE EL NOMBRE AL CUAL ASIGNARA LA TAREA:\n')        
+    
+    accion = int(input('POR FAVOR ESCOJA UNA ACCIÓN: '))
+    
+    if accion == 1:
+        # Creamos la tarea
+        tarea = {}
+        tarea["id"] = id_tarea
+        tarea["descripcion"] = input('POR FAVOR INGRESE UNA DESCRIPCIÓN PARA LA TAREA: ')
+        tarea["fechaVencimiento"] = input('POR FAVOR INGRESE LA FECHA DE VENCIMIENTO DE LA TAREA: ')
+        tarea["estado"] = int(input('POR FAVOR INGRESE EL ESTADO DE LA TAREA (1: COMPLETADA, 0: INCOMPLETA): '))
+        tarea["nombre_miembro"] = input('POR FAVOR INGRESE EL NOMBRE AL CUAL ASIGNARÁ LA TAREA: ')
         
-        id_tarea = id_tarea + 1
+        id_tarea += 1
+        
+        miembro_existente = False
+        
+        # Verificamos si el miembro de equipo ya existe en la lista
         for miembro in miembros_equipo:
-            if(miembro["nombre"] != task["nombre_miembro"]):
-                print('ESTE MIEMBRO DE EQUIPO NO EXISTE SE CREARA Y ASIGNARA TAREA AUTOMATICAMENTE\n')
-                miembro_nuevo = {}
-                tarea_agregar = []
-                miembro_nuevo['nombre'] = task['nombre_miembro']
-                tarea_agregar.append(task['id'])
-                miembro_nuevo['tasks':[]]
-                miembros_equipo.append(miembro_nuevo)
-            else:pass
-                
-        tareas__pendientes.append(task)
+            if miembro["nombre"] == tarea["nombre_miembro"]:
+                miembro["tasks"].append(tarea["id"])
+                miembro_existente = True
+                break
+        
+        # Si no existe el miembro, lo creamos y asignamos la tarea
+        if not miembro_existente:
+            miembro_nuevo = {"nombre": tarea["nombre_miembro"], "tasks": [tarea["id"]]}
+            miembros_equipo.append(miembro_nuevo)
+        
+        tareas_pendientes.append(tarea)
         print(f'{miembros_equipo}\n')
-        print(f'{tareas__pendientes}\n')
-    elif(accion == 2):
-        pass
-    elif(accion == 3):
-        pass
-    elif(accion == 4):
-        pass
-    elif(accion == 5):
-        pass
-    elif(accion == 6):
-        pass
-    elif(accion == 0):
-        print('HAS ESCOJIDO 0 EL PROGRAMA TERMINO')
-        inicio = 0
+        print(f'Tareas Pendientes: {tareas_pendientes}\n')
+    
+    elif accion == 2:
+        nombre_miembro = input("Ingrese el nombre del usuario que desea Buscar\n")
+        for miembro in miembros_equipo:
+            if(miembro["nombre"] == nombre_miembro):
+                print(f'Tareas asignadas al miembro {nombre_miembro}\n')
+                print(miembro["tasks"])
+            else:
+                print("Este miemro no existe")
+    
+    elif accion == 3:
+        print(f'Tareas pendientes\n {tareas_pendientes}')
+    
+    elif accion == 4: 
+        print(f'Tareas Completadas\n {tareas_completadas}')
+    
+    elif accion == 5:
+        id = int(input("Por favor ingrese el id de la tarea que desea eliminar"))
+        for tarea in tareas_completadas:
+            if(tarea["id"] == id):
+                tareas_completadas.remove(tarea)
+                print("Se ha eliminado la tarea")
+                print("la tarea fur eliminada de tareas completadas")
+            else:print("la tarea no se encontro en tareas completadas")
+        for tarea in tareas_pendientes:
+            if(tarea["id"] == id):
+                tareas_pendientes.remove(tarea)
+                print("Se ha eliminado de tareas pendientes")
+            else: print("No se encontro en tareas pendientes") 
+            
+    elif accion == 6:
+        id = int(input("Ingrese el id de la tarea que desea editar\n"))
+        print("Solo podra editar las tareas pendientes\n")
+        for tarea in tareas_pendientes:
+           if(tarea["id"] == id):
+              tarea["fechaVencimiento"] = input('POR FAVOR INGRESE LA FECHA DE VENCIMIENTO DE LA TAREA: ')
+              tarea["estado"] = int(input('POR FAVOR INGRESE EL ESTADO DE LA TAREA (1: COMPLETADA, 0: INCOMPLETA): '))
+              if(tarea["estado"] == 1):
+                  tareas_completadas.append(tarea)
+              else: pass
+        else:
+            print("tarea no encontrada \n")   
+    
+    elif accion == 0:
+        print('HAS ESCOGIDO 0, EL PROGRAMA TERMINÓ')
+        break
+    
     else:
-        print('POR FAVOR ESCOJE UNA ACCON VALIDA DE LA LISTA DE ACCIONES\n')
-print('FIN')
+        print('FIN')

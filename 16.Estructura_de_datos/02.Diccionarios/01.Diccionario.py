@@ -33,3 +33,5 @@ print(f'\nuniversidad {alumno["universidad"] ["nombre"]}')
 # Modificando un dato del diccionario
 alumno["universidad"] ["nombre"] = 'ITM'
 print(f'\nuniversidad {alumno["universidad"] ["nombre"]}')
+
+alumno.
