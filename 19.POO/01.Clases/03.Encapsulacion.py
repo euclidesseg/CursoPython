@@ -30,6 +30,7 @@ class Servivo():
     def tipo(self):
         return self.__tipo
     
+
     @nombre.setter
     def nombre(self, nombre):
         self.__nombre = nombre
@@ -56,6 +57,7 @@ print(servivo.area)
 
     # por convencion de python los metodos setter y getter se suelen nombrear con el mismo 
     # nombre de la propiedad
-    # y para el caso del set se le agrega el decorador property para indicar que va a retornar un valor 
+    # y para el caso del get se le agrega el decorador property para indicar que va a retornar un valor y que ese valor 
+    # esta encapsulado
     # y para el setter el mismo nombre pero con el decorador de @nombredepropiedad.setter
     

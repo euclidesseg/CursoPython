@@ -15,6 +15,7 @@ class Servivo():
     
     # Como nos dimos cuenta en este ejemplo estoy usando el metodo contructor para cambiar el estado de los atributos
     # y para crear e inicializar el nombre del ser vivo
+    
     def __init__(self, nombre, tipo, dieta, area):
         self.tipo = tipo
         self.nombre = nombre
