@@ -14,13 +14,10 @@ NOTA: TAMBIEN PODEMOS CREAR DICCIONARIO DENTRO DE LISTAS
 '''
 
 
-alumno = {"id" : 1,
-          "nombre" : 'Eudlides',
-          "materias" : ["programacion", "Calculo", "Fisica"],
-          "universidad" : {"nombre" : "TDA",
-                           "direccion" : "calle 72"
-                           }
-          }
+alumno = {"id" : 1, "nombre" : 'Eudlides',
+          "materias"    : ["programacion", "Calculo", "Fisica"],
+          "universidad" : {"nombre" : "TDA", "direccion" : "calle 72" }
+         }
 
 print(f'Este alumno tiene los datos\nid {alumno["id"]}, \nnombre {alumno["nombre"]}')
 
@@ -33,5 +30,3 @@ print(f'\nuniversidad {alumno["universidad"] ["nombre"]}')
 # Modificando un dato del diccionario
 alumno["universidad"] ["nombre"] = 'ITM'
 print(f'\nuniversidad {alumno["universidad"] ["nombre"]}')
-
-alumno.

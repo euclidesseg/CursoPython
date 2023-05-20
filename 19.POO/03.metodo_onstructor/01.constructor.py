@@ -1,11 +1,4 @@
 class Operacion:
-    suma = 0
-    resta = 0
-    multiplicacion = 0
-    divicion = 0
-    potencia = 0
-    modulo = 0
-
     def __init__(self, n1, n2):
         self.suma = n1 + n2
         self.resta = n1 - n2
