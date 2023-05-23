@@ -6,7 +6,7 @@
 
 # Tipo de dato entero
 numero = 15;
-# para saber el tipo de dato tiene un numero simplemente usamos el metodo type
+# para saber el tipo de dato que  tiene una variable simplemente usamos el metodo type
 print(f'{numero} {type(numero)} \n')
 
 
