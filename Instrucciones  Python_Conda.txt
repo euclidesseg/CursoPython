@@ -16,6 +16,10 @@
 -----#
 -----#     $ conda deactivate //deactivar el ambiente
 -----# conda remove --name curso --all borrar un ambiente y todas las extensiones
+-----#
+-----#     conda info --envs
+-----# consultar la informacion de donde esta intalado anaconda y todos los entornos virtuales que existen
+
 
 
 ////// INSTALANDO UN EDITOR DE CODIGO SPYDER
