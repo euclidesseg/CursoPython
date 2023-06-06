@@ -9,7 +9,7 @@ for i in range(0, 10):
 print(lista)
 
 
-# Aqui acavamos de ver una forma mas eficas y rapida de crear una lista apartir de un iterable
+# Aqui acavamos de ver una forma mas eficaz y rapida de crear una lista apartir de un iterable
 # de esta menrar reducimos el tiempo de ejecucion
 lista2 = [numero for numero in range(0,10)]
 print(lista2)
