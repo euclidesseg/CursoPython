@@ -63,6 +63,11 @@ ejemplo = op_basicas()
 ejemplo.ingresarDatos()
 ejemplo.sumar()
 
+# funciones de prueba 
+print(isinstance(ejemplo, op_basicas)) # me retorna verdadero porque esta clase si es una intancia
+print(isinstance(ejemplo, raiz)) # me retorna falso porque esta clase no trabaja con la clase raiz
+
+
 ejemplo2 = raiz()
 ejemplo2.ingresarDatos()
 ejemplo2.raizCuvida()
