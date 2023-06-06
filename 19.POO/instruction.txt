@@ -8,3 +8,20 @@
 
 ==== Una instancia de una clase es un objeto creado a partir de una clases y 
 ---- que recibe las caracteristicas y metodos de la clase
+
+---- HERENCIA MULTIPLE 
+    se refiere a a la posibilidad de crear una clase a partir de multiples clases
+    ejeplos 
+    clase _uno:
+        pass
+        
+    clase _dos:
+        pass:
+        
+    class DerivoMultiple(_uno, _dos):
+        pass
+        
+---- tambien podemos usar la herencia multinivel 
+---- que es basica mente derivar de una clase derivada
+---- esto se daria de la siguiente manera la clase base y la clase derivada 
+---- se heredan en una nueva clase derivada
